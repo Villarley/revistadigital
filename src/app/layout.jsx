@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="h-screen w-full flex">
-          <div className="w-1/6 bg-red-500"></div>
-          <div className="w-5/6">{children}</div>
+          <div className="w-1/6 bg-DarkFont"></div>
+          <div className="w-5/6 bg-Bg">{children}</div>
         </div>
       </body>
     </html>
