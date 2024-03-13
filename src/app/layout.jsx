@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="h-screen w-full flex">
-          <div className="w-1/6 bg-DarkFont">
+          <div className="w-[23%] bg-DarkFont">
             <Navbar/>
           </div>
-          <div className="w-5/6 bg-Bg">{children}</div>
+          <div className="w-[77%] bg-Bg">{children}</div>
         </div>
       </body>
     </html>

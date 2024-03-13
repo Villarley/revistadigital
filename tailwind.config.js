@@ -11,7 +11,7 @@ module.exports = {
         "Bg": "#e6e6e6",
         "DarkFont": "#0d0d0d",
         "Blue": "#085987",
-        "Orange":"##ff8000"
+        "Orange":"#ff8000"
       },
     },
   },
