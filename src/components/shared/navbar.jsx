@@ -8,26 +8,26 @@ import { usePathname } from 'next/navigation'
 export default function Navbar() {
     const [selectedTopic, setSelectedTopic] = useState()
     const pathname = usePathname()
-    console.log(pathname)
-    const handleSelectedTopic = ({ selected }) => {
+    const handleSelectedTopic = ( selected ) => {
         setSelectedTopic(selected)
     }
     const topics = [
-        { name: "Tecnologías de la Información (TI)", subTopics: [{name:"/", Dir:""}], dir:"/tics" },
+        { name: "Tecnologías de la Información", subTopics: [{name:"/", Dir:""}], dir:"/tics" },
         { name: "Emprendimiento e innovación", subTopics: [{}], dir:"/emp" },
-        { name: "Programación para web", subTopics: [{name:"/Estructuras de control", Dir:"EstControl"}], dir:"/prweb" },
-        { name: "Diseño de software", subTopics: [{name:"/Estructuras de control", Dir:"EstControl"}], dir:"/disoft" },
-        { name: "Soporte TI", subTopics: [{name:"/Estructuras de control", Dir:"EstControl"}], dir:"/soporte" },
+        { name: "Programación para web", subTopics: [{name:"EstructurasDeControl", Dir:"EstControl"}, {name:"Estructuras de datos", Dir:"EstDatos"}], dir:"/prweb" },
+        { name: "Diseño de software", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/disoft" },
+        { name: "Soporte TI", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/soporte" },
     ]
-    const string = pathname.split("/")
-    const firstPath = "/"+string[ pathname.startsWith("/") ? 1 : 0]
-    useEffect(() => {
-      setSelectedTopic(firstPath)
-    }, [setSelectedTopic, firstPath])
-    
+    // const string = pathname.split("/")
+    // const firstPath = "/"+string[ pathname.startsWith("/") ? 1 : 0]
+    // useEffect(() => {
+    //     if(!string[1] == "" ){
+    //         setSelectedTopic(firstPath)
+    //     }
+    // }, [setSelectedTopic, firstPath, string])
     return (
         <div className="h-full w-full p-4 flex flex-col gap-8 animate__animated animate__fadeInRight">
-            <Link href="#" className="text-white text-3xl text-center w-full">Infórmate<span className="text-Orange font-bold">+</span></Link>
+            <Link href="/" className="text-white text-3xl text-center w-full">Infórmate<span className="text-Orange font-bold">+</span></Link>
             <div className="flex flex-col gap-8">
             {
                 topics.map((topic, idx) => (

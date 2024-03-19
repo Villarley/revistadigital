@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <div className="w-[23%] bg-DarkFont">
             <Navbar/>
           </div>
-          <div className="w-[77%] bg-Bg">{children}</div>
+          <div className="w-[77%] bg-Bg p-8">{children}</div>
         </div>
       </body>
     </html>
