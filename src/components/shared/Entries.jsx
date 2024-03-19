@@ -3,7 +3,6 @@ import Accordion from './Accordion';
 import Link from "next/link";
 
 export default function Entry({ Name, Dir: RootDirection, Clicked, Subtopics, handleSelectedTopic }) {
-  console.log(Clicked)
   return (
     <div className="">
       <Accordion RootDirection={RootDirection} handleSelectedTopic={handleSelectedTopic} Clicked={Clicked} Name={Name} />

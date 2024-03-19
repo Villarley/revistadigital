@@ -1,14 +1,14 @@
 "use client"
 import React from 'react'
-import { H1 } from "@/components/shared/headings/";
-import { prweb } from "@/static/prweb";
+import { H1 } from "@/components/shared/Text" 
+import { Typewriter } from "@/components/shared/";
+import { articles } from "@/articles/articles"
 
-export default function MainTopic({params}) {
+export default function MainTopic({ params }) {
     const { topic } = params
-    console.log(params)
+    const article = prweb[topic]
   return (
-    <>
-    <H1>{prweb.title}</H1>
-    </>
+    
+      <Typewriter text="Solo se escribe una vez." typingSpeed={150}/>
   )
 }
