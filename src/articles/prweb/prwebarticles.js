@@ -5,5 +5,3 @@ export const prwebArticles = {
   ControlStructures: { name: "Estructuras de control", article:{ ControlStructures }, img:"https://images.app.goo.gl/eaJwC8bMSkNYigWbA" },
   FlowDiagrams:{ name:"Diagramas de flujo", article:{ FlowDiagrams }, img:"https://images.app.goo.gl/pXx62GHRk6vhfPym8" },
 }
-
-// Object.entries(prwebArticles).map(([name, info], index) =>())
