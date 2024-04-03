@@ -41,7 +41,7 @@ export default function App({ children }) {
       <div className="hidden md:block md:w-[23%] bg-DarkFont">
         <Navbar />
       </div>
-      <div className="w-full md:w-[77%] bg-Bg p-8">{children}</div>
+      <div className="w-full md:w-[77%] bg-Bg p-8 overflow-auto">{children}</div>
     </div>
   );
 }
