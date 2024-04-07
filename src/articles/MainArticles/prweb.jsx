@@ -28,7 +28,7 @@ export default function Prweb() {
         type="code"
       />
       <MagicMotion >
-        <Grid gap={4} templateColumns="repeat(3, 1fr)">
+        <Grid gap={4} templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(3, 1fr)"]}>
           {Object.entries(prwebArticles)
             .filter(([name, topic]) =>
               topic.name.toLowerCase().includes(searchedValue.toLowerCase())

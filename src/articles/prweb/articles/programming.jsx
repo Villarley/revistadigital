@@ -9,7 +9,7 @@ export default function Programming() {
       <Typewriter
         text="Programación conceptos básicos"
         type="heading"
-        typingSpeed={150}
+        typingSpeed={50}
       />
       <Flex mt={10} direction={"column"} gap={5}>
         <H2>Expresión matemática</H2>
