@@ -1,25 +1,49 @@
-import React from "react"
-import { H1 } from "@/components/shared/Text"
-import { Typewriter, SearchComp, Card } from "@/components/shared/"
-import { prwebArticles } from "@/articles/prweb/prwebarticles"
+"use client";
+import React, { useState } from "react";
+import { MagicMotion } from "react-magic-motion";
+import "animate.css";
+import { Grid } from "@chakra-ui/react";
+import { H1 } from "@/components/shared/Text";
+import { Typewriter, SearchComp, Card } from "@/components/shared/";
+import { prwebArticles } from "@/articles/prweb";
 
 export default function Prweb() {
+  const [searchedValue, setSearchedValue] = useState("");
+  const handleSearchChange = (value) => {
+    setSearchedValue(value);
+  };
+  console.log(searchedValue);
   return (
-    <div className="w-full h-full overflow-y-auto flex flex-col gap-8">
+    <div className="animate__animated animate__fadeIn w-full h-full overflow-y-auto flex flex-col gap-8">
       <div className="w-full flex flex-col md:flex-row items-center">
         <H1>Programación para Web</H1>
-        <SearchComp />
+        <SearchComp
+          handleSearchChange={handleSearchChange}
+          searchedValue={searchedValue}
+        />
       </div>
       <Typewriter
         text="Este es uno de los ejes principales de la tecnicatura, donde se enseñan la mayoría de herramientas para programar para web."
         typingSpeed={25}
         type="code"
       />
-      <div className="h-full grid gap-10 grid-cols-3 ">
-        {Object.entries(prwebArticles).map(([name, info], index) => (
-          <Card root="/prweb" title={info.name} img={info.img} dir={"/datos"} key={index} />
-        ))}
-      </div>
+      <MagicMotion >
+        <Grid gap={4} templateColumns="repeat(3, 1fr)">
+          {Object.entries(prwebArticles)
+            .filter(([name, topic]) =>
+              topic.name.toLowerCase().includes(searchedValue.toLowerCase())
+            )
+            .map(([name, info], index) => (
+              <Card
+                root="/prweb"
+                title={info.name}
+                img={info.img}
+                dir={name}
+                key={index}
+              />
+            ))}
+        </Grid>
+      </MagicMotion>
     </div>
   );
 }

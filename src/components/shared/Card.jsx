@@ -16,7 +16,7 @@ export default function Card({ title, img, root, dir }) {
       className=" rounded-t-md w-full h-1/2"
     />
     <h3 className="mt-2 text-lg font-semibold">{title}</h3>
-    <Link className="" href={root+dir}>
+    <Link className="" href={root+"/"+dir}>
     <CircleChevronRight color='#ff8000'/>
     </Link>
   </div>
