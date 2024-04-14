@@ -2,6 +2,19 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      
+      {
+        protocol: "https",
+        hostname: "apolonio.es",
+      },
+      {
+        protocol: "https",
+        hostname: "ney.one",
+      },
+      {
+        protocol: "https",
+        hostname: "image.slidesharecdn.com",
+      },
       {
         protocol: "https",
         hostname: "slidebazaar.com",
