@@ -40,7 +40,7 @@ const MainTab = () => {
       />
       <Flex mt={10} gap={5} width="100%">
       {sections.map((section, index) => (
-        <div key={index} className="w-full flex flex-col items-center">
+        <div key={index} className="w-full flex flex-col items-center justify-between">
             <H2 >{section.title}</H2>
             <Image width={300} height={200} src={section.imageUrl} alt={section.imageAlt} />
             <Text mt={10} textAlign="center">{section.description}</Text>
@@ -55,13 +55,13 @@ const OperatorGuide = () => {
   const data = [
     {
       title: "Operadores de asignación",
-      content: [{ description: "x = 5 o x → 5" }],
+      content: [{description:"Los operadores de asignación son los que se usan para asignar un valor específico a una estructura de datos"},{ description: "x = 5 o x → 5" }],
     },
     {
       title: "Operadores aritméticos",
       content: [
+        { description: "Se utiliza para realizar todo tipo de operaciones matemáticas." },
         { description: "^ o √" },
-        { description: "-" },
         { description: "* / %" },
         { description: "+ o -" },
       ],
@@ -92,15 +92,15 @@ const OperatorGuide = () => {
   return (
     <div className="p-4 bg-white text-black">
       <h1 className="text-2xl font-bold mb-5 text-center">Guía de Operadores</h1>
-      <Flex gap={8} wrap="wrap" justifyContent="space-between">
+      <Flex gap={8} wrap="wrap" justifyContent={{ base:"center",sm:"center",md:"center" ,lg:"space-between" }}>
       {data.map((section, index) => (
-        <div key={index} className="mb-6">
+        <div key={index} className="mb-6 flex flex-col items-center">
           <H2>{section.title}</H2>
           {section.intro && <p className="mb-4 italic">{section.intro}</p>}
           {section.content.map((item, idx) => (
-            <p key={idx} className="mb-1 pl-4">
+            <Text key={idx} width={80} textAlign="center">
               {item.description}
-            </p>
+            </Text>
           ))}
         </div>
       ))}
