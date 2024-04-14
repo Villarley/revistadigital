@@ -1,6 +1,7 @@
 import { Prweb } from "./MainArticles";
-export const articles = {
+const articles = {
   prweb: Prweb,
   
 
 }
+export default articles;
