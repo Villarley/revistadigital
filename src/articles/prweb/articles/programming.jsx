@@ -3,8 +3,9 @@ import React, { useState } from "react"
 import Image from "next/image"
 import "animate.css"
 import { Flex, Box, Text } from "@chakra-ui/react"
-import { Typewriter } from "@/components/shared/"
+import { Typewriter, ArticleCard } from "@/components/shared/"
 import { H1, H2, NormalText, Code } from "@/components/shared/Text"
+import { ConditionalConsole } from "@/assets/images"
 
 export default function Programming() {
   const [activeTab, setActiveTab] = useState(MainTab)
@@ -34,7 +35,7 @@ const MainTab = () => {
       description: "Aquellas condiciones que dependen de una expresión lógica.",
       imageUrl: "https://ney.one/wp-content/uploads/2021/05/implicacion-2.png",
       imageAlt: "Condición Lógica",
-      example: "if(3>2)console.log('Es mayor')",
+      example: <Image className="p-2" width={300} height={300} alt="" src={ConditionalConsole}/>,
     },
   ]
   return (
@@ -45,14 +46,8 @@ const MainTab = () => {
         typingSpeed={50}
       />
       <Flex mt={10} gap={5} flexDirection="column">
-        {sections.map((item, idx) => (
-          <Flex key={idx} flexDirection="column" justifyContent="left">
-            <H1>{item.title}</H1>
-            <NormalText>
-              {item.description}
-            </NormalText>
-            <Code>{ item.example }</Code>
-          </Flex>
+        {sections.map((item, id) => (
+          <ArticleCard key={id} title={item.title} description={item.description} example={item.example} image={item.imageUrl} color="Dark"/>
         ))}
       </Flex>
       <OperatorGuide />
@@ -108,12 +103,10 @@ const OperatorGuide = () => {
 
   return (
     <div className="p-4 bg-white text-black">
-      <h1 className="text-2xl font-bold mb-5 text-center">
-        Guía de Operadores
-      </h1>
+      <H1>Guía de operadores</H1>
       <Flex
         gap={8}
-        wrap="wrap"
+        flexDirection="column"
         justifyContent={{
           base: "center",
           sm: "center",
@@ -122,15 +115,7 @@ const OperatorGuide = () => {
         }}
       >
         {data.map((section, index) => (
-          <div key={index} className="mb-6 flex flex-col items-center">
-            <H2>{section.title}</H2>
-            {section.intro && <p className="mb-4 italic">{section.intro}</p>}
-            {section.content.map((item, idx) => (
-              <Text key={idx} width={80} textAlign="center">
-                {item.description}
-              </Text>
-            ))}
-          </div>
+          <ArticleCard key={index} title={section.title} description={section.intro} example={section.content[0].description}  />
         ))}
       </Flex>
     </div>

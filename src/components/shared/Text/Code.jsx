@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React from "react"
 
-export default function Code({ children }) {
+export default function Code({ children, color }) {
   return (
-    <span className="w-full text-lg font-mono text-regular_text bg-[#bebebe] rounded-md p-0.5">
+    <span className={color === "Dark" ? "w-full text-lg font-mono text-[#fff] bg-[#000] rounded-md p-2" : "w-full text-lg font-mono text-[#000] bg-[#bebebe] rounded-md p-2"}>
       {children}
     </span>
-  );
+  )
 }
