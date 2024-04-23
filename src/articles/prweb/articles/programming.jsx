@@ -1,7 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import "animate.css";
+"use client"
+import React, { useState } from "react"
+import Image from "next/image"
+import "animate.css"
 import {
   Flex,
   Tabs,
@@ -9,14 +9,14 @@ import {
   TabList,
   TabPanels,
   TabPanel,
-} from "@chakra-ui/react";
-import { Typewriter, ArticleCard } from "@/components/shared/";
-import { H1, H2, NormalText, Code } from "@/components/shared/Text";
-import { ConditionalConsole } from "@/assets/images";
+} from "@chakra-ui/react"
+import { Typewriter, ArticleCard } from "@/components/shared/"
+import { H1, H2, NormalText, BoldText } from "@/components/shared/Text"
+import { ConditionalConsole } from "@/assets/images"
 
 export default function Programming() {
-  const [activeTab, setActiveTab] = useState(MainTab);
-  return <div className="h-full flex flex-col gap-4">{activeTab}</div>;
+  const [activeTab, setActiveTab] = useState(MainTab)
+  return <div className="h-full flex flex-col gap-4">{activeTab}</div>
 }
 const MainTab = () => {
   return (
@@ -44,15 +44,15 @@ const MainTab = () => {
             </div>
           </TabPanel>
           <TabPanel>
-          <div className="animate__animated animate__fadeInLeftBig">
-            <p>three!</p>
-          </div>
+            <div className="animate__animated animate__fadeIn">
+              <SubProcess />
+            </div>
           </TabPanel>
         </TabPanels>
       </Tabs>
     </>
-  );
-};
+  )
+}
 const Expressions = () => {
   const sections = [
     {
@@ -87,7 +87,7 @@ const Expressions = () => {
         />
       ),
     },
-  ];
+  ]
   return (
     <Flex mt={10} gap={5} flexDirection="column">
       {sections.map((item, id) => (
@@ -101,8 +101,8 @@ const Expressions = () => {
         />
       ))}
     </Flex>
-  );
-};
+  )
+}
 const OperatorGuide = () => {
   const data = [
     {
@@ -148,7 +148,7 @@ const OperatorGuide = () => {
         { description: "No: !" },
       ],
     },
-  ];
+  ]
 
   return (
     <div className="p-4 bg-white text-black">
@@ -173,5 +173,24 @@ const OperatorGuide = () => {
         ))}
       </Flex>
     </div>
-  );
-};
+  )
+}
+const SubProcess = () => {
+  return (
+    <>
+      <Flex flexDirection="column">
+        <H1>Subprocesos</H1>
+        <NormalText>División del código en trozos más pequeños que está fuera del algoritmo principal.  </NormalText>
+        <Flex justifyContent="space-between">
+          <NormalText>Definir ⇒ Crear</NormalText>
+          <NormalText>Invocar ⇒ Llamar</NormalText>
+        </Flex>
+        <H2>Tipos de subproceso</H2>
+        <Flex justifyContent="space-between">
+          <NormalText><BoldText>Método o procedimiento</BoldText></NormalText>
+          <NormalText><BoldText>Función</BoldText></NormalText>
+        </Flex>
+      </Flex>
+    </>
+  )
+}
