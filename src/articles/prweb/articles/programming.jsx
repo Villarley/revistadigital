@@ -1,17 +1,59 @@
-"use client"
-import React, { useState } from "react"
-import Image from "next/image"
-import "animate.css"
-import { Flex, Box, Text } from "@chakra-ui/react"
-import { Typewriter, ArticleCard } from "@/components/shared/"
-import { H1, H2, NormalText, Code } from "@/components/shared/Text"
-import { ConditionalConsole } from "@/assets/images"
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import "animate.css";
+import {
+  Flex,
+  Tabs,
+  Tab,
+  TabList,
+  TabPanels,
+  TabPanel,
+} from "@chakra-ui/react";
+import { Typewriter, ArticleCard } from "@/components/shared/";
+import { H1, H2, NormalText, Code } from "@/components/shared/Text";
+import { ConditionalConsole } from "@/assets/images";
 
 export default function Programming() {
-  const [activeTab, setActiveTab] = useState(MainTab)
-  return <div className="h-full flex flex-col gap-4">{activeTab}</div>
+  const [activeTab, setActiveTab] = useState(MainTab);
+  return <div className="h-full flex flex-col gap-4">{activeTab}</div>;
 }
 const MainTab = () => {
+  return (
+    <>
+      <Typewriter
+        text="Programación conceptos básicos"
+        type="heading"
+        typingSpeed={50}
+      />
+      <Tabs variant="enclosed" mt={4}>
+        <TabList>
+          <Tab _selected={{ color: "#fff", bg: "black" }}>Expresiones</Tab>
+          <Tab _selected={{ color: "#fff", bg: "black" }}>Operadores</Tab>
+          <Tab _selected={{ color: "#fff", bg: "black" }}>Subprocesos</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <div className="animate__animated animate__fadeInRightBig">
+              <Expressions />
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="animate__animated animate__fadeInRightBig">
+              <OperatorGuide />
+            </div>
+          </TabPanel>
+          <TabPanel>
+          <div className="animate__animated animate__fadeInLeftBig">
+            <p>three!</p>
+          </div>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </>
+  );
+};
+const Expressions = () => {
   const sections = [
     {
       title: "Expresión matemática",
@@ -35,25 +77,32 @@ const MainTab = () => {
       description: "Aquellas condiciones que dependen de una expresión lógica.",
       imageUrl: "https://ney.one/wp-content/uploads/2021/05/implicacion-2.png",
       imageAlt: "Condición Lógica",
-      example: <Image className="p-2" width={300} height={300} alt="" src={ConditionalConsole}/>,
+      example: (
+        <Image
+          className="p-2"
+          width={300}
+          height={300}
+          alt=""
+          src={ConditionalConsole}
+        />
+      ),
     },
-  ]
+  ];
   return (
-    <>
-      <Typewriter
-        text="Programación conceptos básicos"
-        type="heading"
-        typingSpeed={50}
-      />
-      <Flex mt={10} gap={5} flexDirection="column">
-        {sections.map((item, id) => (
-          <ArticleCard key={id} title={item.title} description={item.description} example={item.example} image={item.imageUrl} color="Dark"/>
-        ))}
-      </Flex>
-      <OperatorGuide />
-    </>
-  )
-}
+    <Flex mt={10} gap={5} flexDirection="column">
+      {sections.map((item, id) => (
+        <ArticleCard
+          key={id}
+          title={item.title}
+          description={item.description}
+          example={item.example}
+          image={item.imageUrl}
+          color="Dark"
+        />
+      ))}
+    </Flex>
+  );
+};
 const OperatorGuide = () => {
   const data = [
     {
@@ -99,7 +148,7 @@ const OperatorGuide = () => {
         { description: "No: !" },
       ],
     },
-  ]
+  ];
 
   return (
     <div className="p-4 bg-white text-black">
@@ -115,9 +164,14 @@ const OperatorGuide = () => {
         }}
       >
         {data.map((section, index) => (
-          <ArticleCard key={index} title={section.title} description={section.intro} example={section.content[0].description}  />
+          <ArticleCard
+            key={index}
+            title={section.title}
+            description={section.intro}
+            example={section.content[0].description}
+          />
         ))}
       </Flex>
     </div>
-  )
-}
+  );
+};
