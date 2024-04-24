@@ -178,7 +178,7 @@ const OperatorGuide = () => {
 const SubProcess = () => {
   return (
     <>
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" gap={5}>
         <H1>Subprocesos</H1>
         <NormalText>División del código en trozos más pequeños que está fuera del algoritmo principal.  </NormalText>
         <Flex justifyContent="space-between">
@@ -186,10 +186,12 @@ const SubProcess = () => {
           <NormalText>Invocar ⇒ Llamar</NormalText>
         </Flex>
         <H2>Tipos de subproceso</H2>
-        <Flex justifyContent="space-between">
+        <Flex flexDirection={["column", "row"]} justifyContent="space-between">
           <NormalText><BoldText>Método o procedimiento</BoldText></NormalText>
           <NormalText><BoldText>Función</BoldText></NormalText>
         </Flex>
+        <H2>Parámetros</H2>
+        <NormalText>Un parámetro es un valor que una función recibe.</NormalText>
       </Flex>
     </>
   )
