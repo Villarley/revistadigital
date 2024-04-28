@@ -2,8 +2,9 @@
 import "animate.css"
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Entry from './Entries'
 import { usePathname } from 'next/navigation'
+import Entry from './Entries'
+import { prwebArticles } from "@/articles/prweb";
 
 export default function Navbar() {
     const [selectedTopic, setSelectedTopic] = useState()
@@ -14,7 +15,7 @@ export default function Navbar() {
     const topics = [
         { name: "Tecnologías de la Información", subTopics: [{name:"/", Dir:""}], dir:"/tics" },
         { name: "Emprendimiento e innovación", subTopics: [{}], dir:"/emp" },
-        { name: "Programación para web", subTopics: [{name:"EstructurasDeControl", Dir:"EstControl"}, {name:"Estructuras de datos", Dir:"EstDatos"}], dir:"/prweb" },
+        { name: "Programación para web", subTopics: prwebArticles, dir:"/prweb" },
         { name: "Diseño de software", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/disoft" },
         { name: "Soporte TI", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/soporte" },
     ]

@@ -9,7 +9,7 @@ export default function Accordion({ RootDirection, Clicked, handleSelectedTopic,
   };
 
   return (
-    <button onClick={() => Clicked ? handleSelectedTopic("") : handleSelectedTopic(RootDirection)} className="w-full flex justify-between items-center text-md text-white">
+    <button onClick={() => Clicked ? handleSelectedTopic("") : handleSelectedTopic(RootDirection)} className="w-full flex justify-between items-center text-xl text-white">
       <p>{Name}</p>
       <span style={chevronStyle}>
         <ChevronDown /> {/* Siempre usa el mismo ícono */}

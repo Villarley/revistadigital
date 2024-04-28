@@ -1,18 +1,18 @@
-"use client";
-import React, { useState } from "react";
-import { MagicMotion } from "react-magic-motion";
-import "animate.css";
-import { Grid } from "@chakra-ui/react";
-import { H1 } from "@/components/shared/Text";
-import { Typewriter, SearchComp, Card } from "@/components/shared/";
-import { prwebArticles } from "@/articles/prweb";
+"use client"
+import React, { useState } from "react"
+import { MagicMotion } from "react-magic-motion"
+import "animate.css"
+import { Grid } from "@chakra-ui/react"
+import { H1 } from "@/components/shared/Text"
+import { Typewriter, SearchComp, Card } from "@/components/shared/"
+import { prwebArticles } from "@/articles/prweb"
 
 export default function Prweb() {
-  const [searchedValue, setSearchedValue] = useState("");
+  const [searchedValue, setSearchedValue] = useState("")
   const handleSearchChange = (value) => {
-    setSearchedValue(value);
-  };
-  console.log(searchedValue);
+    setSearchedValue(value)
+  }
+  console.log(searchedValue)
   return (
     <div className="animate__animated animate__fadeIn w-full h-full overflow-y-auto flex flex-col gap-8">
       <div className="w-full flex flex-col md:flex-row items-center">
@@ -45,5 +45,5 @@ export default function Prweb() {
         </Grid>
       </MagicMotion>
     </div>
-  );
+  )
 }
