@@ -107,46 +107,23 @@ const OperatorGuide = () => {
   const data = [
     {
       title: "Operadores de asignación",
-      content: [
-        {
-          description:
-            "Los operadores de asignación son los que se usan para asignar un valor específico a una estructura de datos",
-        },
-        { description: "x = 5 o x → 5" },
-      ],
+      intro:"Los operadores de asignación se utilizan para establecer o actualizar el valor de una variable.",
+      content:"x = 5 o x → 5",
     },
     {
       title: "Operadores aritméticos",
-      content: [
-        {
-          description:
-            "Se utiliza para realizar todo tipo de operaciones matemáticas.",
-        },
-        { description: "^ o √" },
-        { description: "* / %" },
-        { description: "+ o -" },
-      ],
+      intro:"Estos operadores ejecutan operaciones matemáticas como sumar, restar, multiplicar y dividir.",
+      content:"^ o √ * / % + o -" 
     },
     {
       title: "Operadores relacionales - comparativos",
-      intro: "se resuelven de izquierda a derecha",
-      content: [
-        { description: "< > ≤ ≥" },
-        { description: "Diferente: <> ≠ ! =" },
-        { description: "Igual a: ==" },
-      ],
+      intro: "Comparan dos valores, determinando relaciones como mayor que, menor que o igual. Se resuelven de izquierda a derecha.",
+      content: "< > ≤ ≥Diferente: <> ≠ ! = Igual a: =="
     },
     {
       title: "Operadores lógicos",
-      intro: "NAO",
-      content: [
-        { description: "Negación" },
-        { description: "And" },
-        { description: "Or" },
-        { description: "Y : & ^ siempre es verdadero" },
-        { description: "O: || p" },
-        { description: "No: !" },
-      ],
+      intro: "Permiten combinar condiciones booleanas, esencial para estructuras de control y decisiones lógicas. Se resuelven en el siguiente orden -> Not And Or",
+      content: "Negación And Or Y <br/> : & ^ siempre es verdadero O: || p No: !"
     },
   ]
 
@@ -168,7 +145,7 @@ const OperatorGuide = () => {
             key={index}
             title={section.title}
             description={section.intro}
-            example={section.content[0].description}
+            example={section.content}
           />
         ))}
       </Flex>
