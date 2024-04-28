@@ -11,8 +11,8 @@ import {
   TabPanel,
 } from "@chakra-ui/react"
 import { Typewriter, ArticleCard } from "@/components/shared/"
-import { H1, H2, NormalText, BoldText } from "@/components/shared/Text"
-import { ConditionalConsole } from "@/assets/images"
+import { H1, H2, NormalText, BoldText, Code } from "@/components/shared/Text"
+import { ConditionalConsole, ReferenceParameter } from "@/assets/images"
 
 export default function Programming() {
   const [activeTab, setActiveTab] = useState(MainTab)
@@ -107,23 +107,28 @@ const OperatorGuide = () => {
   const data = [
     {
       title: "Operadores de asignación",
-      intro:"Los operadores de asignación se utilizan para establecer o actualizar el valor de una variable.",
-      content:"x = 5 o x → 5",
+      intro:
+        "Los operadores de asignación se utilizan para establecer o actualizar el valor de una variable.",
+      content: "x = 5 o x → 5",
     },
     {
       title: "Operadores aritméticos",
-      intro:"Estos operadores ejecutan operaciones matemáticas como sumar, restar, multiplicar y dividir.",
-      content:"^ o √ * / % + o -" 
+      intro:
+        "Estos operadores ejecutan operaciones matemáticas como sumar, restar, multiplicar y dividir.",
+      content: "^ o √ * / % + o -",
     },
     {
       title: "Operadores relacionales - comparativos",
-      intro: "Comparan dos valores, determinando relaciones como mayor que, menor que o igual. Se resuelven de izquierda a derecha.",
-      content: "< > ≤ ≥Diferente: <> ≠ ! = Igual a: =="
+      intro:
+        "Comparan dos valores, determinando relaciones como mayor que, menor que o igual. Se resuelven de izquierda a derecha.",
+      content: "< > ≤ ≥Diferente: <> ≠ ! = Igual a: ==",
     },
     {
       title: "Operadores lógicos",
-      intro: "Permiten combinar condiciones booleanas, esencial para estructuras de control y decisiones lógicas. Se resuelven en el siguiente orden -> Not And Or",
-      content: "Negación And Or Y <br/> : & ^ siempre es verdadero O: || p No: !"
+      intro:
+        "Permiten combinar condiciones booleanas, esencial para estructuras de control y decisiones lógicas. Se resuelven en el siguiente orden -> Not And Or",
+      content:
+        "Negación And Or Y <br/> : & ^ siempre es verdadero O: || p No: !",
     },
   ]
 
@@ -157,18 +162,55 @@ const SubProcess = () => {
     <>
       <Flex flexDirection="column" gap={5}>
         <H1>Subprocesos</H1>
-        <NormalText>División del código en trozos más pequeños que está fuera del algoritmo principal.  </NormalText>
+        <NormalText>
+          División del código en trozos más pequeños que está fuera del
+          algoritmo principal.{" "}
+        </NormalText>
         <Flex justifyContent="space-between">
           <NormalText>Definir ⇒ Crear</NormalText>
           <NormalText>Invocar ⇒ Llamar</NormalText>
         </Flex>
         <H2>Tipos de subproceso</H2>
-        <Flex flexDirection={["column", "row"]} justifyContent="space-between">
-          <NormalText><BoldText>Método o procedimiento</BoldText></NormalText>
-          <NormalText><BoldText>Función</BoldText></NormalText>
+        <Flex flexDirection="column" justifyContent="space-between" gap={3}>
+          <NormalText>
+            <BoldText>Método o procedimiento. </BoldText>
+            Un método es una función incorporada en un objeto que actúa sobre los datos de ese objeto, generalmente sin devolver un resultado.
+          </NormalText>
+          <Code language="javascript">{`let persona = {
+    nombre: "Carlos",
+    saludar: function() {
+        console.log("Hola, mi nombre es " + this.nombre)
+    }
+}
+
+persona.saludar() // Muestra "Hola, mi nombre es Carlos" y no devuelve nada
+`}</Code>
+          <NormalText>
+            <BoldText>Función. </BoldText>
+            Una función es una unidad de código diseñada para realizar una tarea específica y devolver un resultado.
+          </NormalText>
+          <Code language="javascript">{`function sumar(a, b) {
+    return a + b
+}
+console.log(sumar(5, 3)) // Muestra 8
+`}</Code>
         </Flex>
-        <H2>Parámetros</H2>
-        <NormalText>Un parámetro es un valor que una función recibe.</NormalText>
+        <H2>
+          <BoldText>Parámetros</BoldText>
+        </H2>
+        <NormalText>
+          Un parámetro es un valor que una función recibe.
+        </NormalText>
+        <Flex gap={3} justifyContent="space-between">
+          <div className="">
+            <NormalText>Parámetro por valor</NormalText>
+            <Code></Code>
+          </div>
+          <div className="">
+            <NormalText>Parámetro por referencia</NormalText>
+            <Code></Code>
+          </div>
+        </Flex>
       </Flex>
     </>
   )
