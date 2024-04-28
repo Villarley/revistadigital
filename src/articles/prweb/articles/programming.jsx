@@ -170,8 +170,37 @@ const SubProcess = () => {
           <NormalText>Definir ⇒ Crear</NormalText>
           <NormalText>Invocar ⇒ Llamar</NormalText>
         </Flex>
-        <H2>Tipos de subproceso</H2>
-        <Flex flexDirection="column" justifyContent="space-between" gap={3}>
+        <H2>
+          <BoldText>Parámetros</BoldText>
+        </H2>
+        <NormalText>
+          Un parámetro es un valor que una función recibe.
+        </NormalText>
+        <Flex gap={3} justifyContent="space-between" flexDirection={["column", "column", "column", "column", "row"]}>
+          <div className="">
+            <NormalText>Parámetro por valor</NormalText>
+            <Code language="javascript">{`//Copia al volver conserva su valor inicial
+let name = "Carlos"
+let nameCopy = name
+function greeting(nameCopy){
+	nameCopy = "Juan"
+	console.log("Hola don ", +nameCopy)
+}
+console.log(name) //"Carlos"`}</Code>
+          </div>
+          <div className="">
+            <NormalText>Parámetro por referencia</NormalText>
+            <Code language="javascript">{`//Valor original conserva el último valor modificado
+let name = "Carlos"
+function greeting(name){
+	name = "Juan"
+	console.log("Hola don ", +name)
+}
+console.log(name) //"Juan"`}</Code>
+          </div>
+        </Flex>
+        <H2><BoldText>Tipos de subproceso</BoldText></H2>
+        <Flex flexDirection="column" justifyContent="space-evenly" gap={3}>
           <NormalText>
             <BoldText>Método o procedimiento. </BoldText>
             Un método es una función incorporada en un objeto que actúa sobre los datos de ese objeto, generalmente sin devolver un resultado.
@@ -194,22 +223,6 @@ persona.saludar() // Muestra "Hola, mi nombre es Carlos" y no devuelve nada
 }
 console.log(sumar(5, 3)) // Muestra 8
 `}</Code>
-        </Flex>
-        <H2>
-          <BoldText>Parámetros</BoldText>
-        </H2>
-        <NormalText>
-          Un parámetro es un valor que una función recibe.
-        </NormalText>
-        <Flex gap={3} justifyContent="space-between">
-          <div className="">
-            <NormalText>Parámetro por valor</NormalText>
-            <Code></Code>
-          </div>
-          <div className="">
-            <NormalText>Parámetro por referencia</NormalText>
-            <Code></Code>
-          </div>
         </Flex>
       </Flex>
     </>
