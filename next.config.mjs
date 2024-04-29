@@ -9,6 +9,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "bs-uploads.toptal.io",
+      },
+      {
+        protocol: "https",
         hostname: "ney.one",
       },
       {
