@@ -5,7 +5,9 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
+  UnorderedList,
+  List,
+  ListItem,
   Tr,
   Th,
   Td,
@@ -18,7 +20,7 @@ import {
   TabPanels,
 } from "@chakra-ui/react"
 import { Typewriter } from "@/components/shared/"
-import { NormalText, BoldText } from "@/components/shared/Text"
+import { H1, H2, NormalText, BoldText } from "@/components/shared/Text"
 import { Pyramid } from "@/assets/images/"
 
 export default function Databases() {
@@ -40,6 +42,7 @@ export default function Databases() {
             </TabPanel>
             <TabPanel>
               <div className="animate__animated animate__fadeInRightBig">
+                <Keys/>
               </div>
             </TabPanel>
             <TabPanel>
@@ -112,6 +115,22 @@ const Concepts = () => {
         </TableContainer>
       </Flex>
 
+    </>
+  )
+}
+const Keys = () =>{
+  return (
+    <>
+    <Flex flexDirection="column" gap={3}>
+      <H1>Llaves</H1>
+      <NormalText>Es un campo que identifica al registro entero.</NormalText>
+      <H2>Llaves primarias(pk)</H2>
+      <UnorderedList>
+        <ListItem>
+          Es único
+        </ListItem>
+      </UnorderedList>
+    </Flex>
     </>
   )
 }
