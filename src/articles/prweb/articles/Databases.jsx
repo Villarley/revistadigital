@@ -125,11 +125,45 @@ const Keys = () =>{
       <H1>Llaves</H1>
       <NormalText>Es un campo que identifica al registro entero.</NormalText>
       <H2>Llaves primarias(pk)</H2>
+      <NormalText>Una clave primaria es una columna o un conjunto de columnas en una tabla cuyos valores identifican de forma exclusiva una fila de la tabla. Una base de datos relacional está diseñada para imponer la exclusividad de las claves primarias permitiendo que haya sólo una fila con un valor de clave primaria específico en una tabla.</NormalText>
       <UnorderedList>
         <ListItem>
           Es único
         </ListItem>
+        <ListItem>No puede borrarse</ListItem>
       </UnorderedList>
+      <H2>Llaves alternas</H2>
+      <NormalText>Son posibles llaves primarias que se pueden utilizar en caso de necesitar identificar por otro medio.
+      </NormalText>
+      <H2>Llaves foráneas</H2>
+      <NormalText>Una clave foránea es una columna o un conjunto de columnas en una tabla cuyos valores corresponden a los valores de la clave primaria de otra tabla. Para poder añadir una fila con un valor de clave foránea específico, debe existir una fila en la tabla relacionada con el mismo valor de clave primaria.</NormalText>
+      <TableContainer>
+          <Table variant='striped' colorScheme="black">
+            <TableCaption>Lo señalado en rojo es una llave primaria y lo señalado en celeste son llaves alternas</TableCaption>
+            <Thead>
+              <Tr>
+                <Th color="#ff0000">Cédula</Th>
+                <Th color="#0083ff">Carnet</Th>
+                <Th color="#ff8000">CedulaCarnet</Th>
+                <Th>Nombre</Th>
+                <Th>Apellido</Th>
+                <Th>Fecha de nacimiento</Th>
+                <Th>Salario</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td color="#ff0000">1-1111-1112</Td>
+                <Td color="#0083ff">2015458</Td>
+                <Td color="ff8000">1-1111-11122015458</Td>
+                <Td>John</Td>
+                <Td>Doe</Td>
+                <Td>01/01/1990</Td>
+                <Td>1000</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
     </Flex>
     </>
   )
