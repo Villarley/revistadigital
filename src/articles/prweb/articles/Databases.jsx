@@ -20,7 +20,7 @@ import {
   TabPanels,
 } from "@chakra-ui/react"
 import { Typewriter } from "@/components/shared/"
-import { H1, H2, NormalText, BoldText } from "@/components/shared/Text"
+import { H1, H2, NormalText, BoldText, Code } from "@/components/shared/Text"
 import { Pyramid } from "@/assets/images/"
 
 export default function Databases() {
@@ -125,21 +125,23 @@ const Keys = () =>{
       <H1>Llaves</H1>
       <NormalText>Es un campo que identifica al registro entero.</NormalText>
       <H2>Llaves primarias(pk)</H2>
-      <NormalText>Una clave primaria es una columna o un conjunto de columnas en una tabla cuyos valores identifican de forma exclusiva una fila de la tabla. Una base de datos relacional está diseñada para imponer la exclusividad de las claves primarias permitiendo que haya sólo una fila con un valor de clave primaria específico en una tabla.</NormalText>
       <UnorderedList>
         <ListItem>
           Es único
         </ListItem>
         <ListItem>No puede borrarse</ListItem>
       </UnorderedList>
+      <Code>Una clave primaria es una columna o un conjunto de columnas en una tabla cuyos valores identifican de forma exclusiva una fila de la tabla. Una base de datos relacional está diseñada para imponer la exclusividad de las claves primarias permitiendo que haya sólo una fila con un valor de clave primaria específico en una tabla.</Code>
       <H2>Llaves alternas</H2>
       <NormalText>Son posibles llaves primarias que se pueden utilizar en caso de necesitar identificar por otro medio.
       </NormalText>
       <H2>Llaves foráneas</H2>
-      <NormalText>Una clave foránea es una columna o un conjunto de columnas en una tabla cuyos valores corresponden a los valores de la clave primaria de otra tabla. Para poder añadir una fila con un valor de clave foránea específico, debe existir una fila en la tabla relacionada con el mismo valor de clave primaria.</NormalText>
+      <Code>Una clave foránea es una columna o un conjunto de columnas en una tabla cuyos valores corresponden a los valores de la clave primaria de otra tabla. Para poder añadir una fila con un valor de clave foránea específico, debe existir una fila en la tabla relacionada con el mismo valor de clave primaria.</Code>
+      <H2>Superllave</H2>
+      <NormalText>Es una llave compuesta por varias llaves primarias o alternas para generar un identificador único.</NormalText>
       <TableContainer>
           <Table variant='striped' colorScheme="black">
-            <TableCaption>Lo señalado en rojo es una llave primaria y lo señalado en celeste son llaves alternas</TableCaption>
+            <TableCaption>Lo señalado en rojo es una llave primaria, lo señalado en celeste son llaves alternas, lo señalado en naranja es una superllave y lo señalado en verde es una llave foránea.</TableCaption>
             <Thead>
               <Tr>
                 <Th color="#ff0000">Cédula</Th>
@@ -149,17 +151,19 @@ const Keys = () =>{
                 <Th>Apellido</Th>
                 <Th>Fecha de nacimiento</Th>
                 <Th>Salario</Th>
+                <Th color="#008000">PuestoId</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td color="#ff0000">1-1111-1112</Td>
                 <Td color="#0083ff">2015458</Td>
-                <Td color="ff8000">1-1111-11122015458</Td>
+                <Td color="#ff8000">1-1111-11122015458</Td>
                 <Td>John</Td>
                 <Td>Doe</Td>
                 <Td>01/01/1990</Td>
                 <Td>1000</Td>
+                <Td color="#008000">c0522173-db11-4229-ab92-5009e7557a27</Td>
               </Tr>
             </Tbody>
           </Table>
