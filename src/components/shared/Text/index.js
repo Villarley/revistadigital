@@ -1,0 +1,7 @@
+export {default as H1} from "./H1"
+export {default as H2} from "./H2"
+export {default as H3} from "./H3"
+export {default as Code} from "./Code"
+export {default as Superheading} from "./Superheading"
+export {default as NormalText} from "./NormalText"
+export {default as BoldText} from "./Bold"
