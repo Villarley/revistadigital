@@ -40,6 +40,7 @@ export default function Prweb() {
                 img={info.img}
                 dir={name}
                 key={index}
+                linkInsideMagazine={true}
               />
             ))}
         </Grid>

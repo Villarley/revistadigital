@@ -39,6 +39,22 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.weareamundsen.com",
       },
+      {
+        protocol: "https",
+        hostname: "uem.edu.mx",
+      },
+      {
+        protocol:"https",
+        hostname:"www.uaeh.edu.mx"
+      },
+      {
+        protocol:"https",
+        hostname:"images.ctfassets.net"
+      },
+      {
+        protocol:"https",
+        hostname:"www.nextu.com"
+      }
     ],
   },
 };
