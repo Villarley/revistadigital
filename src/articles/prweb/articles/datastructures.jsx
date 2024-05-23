@@ -1,5 +1,5 @@
 import React from "react"
-import { Typewriter } from "@/components/shared"
+import { Typewriter, BackIcon } from "@/components/shared"
 import Image from "next/image"
 import {
   DataStructures as DataStructuresImg,
@@ -45,8 +45,10 @@ import {
 export default function DataStructures() {
   return (
     <div className="w-full">
-      <Typewriter text="Estructuras de datos" type="heading" typingSpeed={50} />
-      <NormalText></NormalText>
+      <div className="flex">
+        <BackIcon/>
+        <Typewriter text="Estructuras de datos" type="heading" typingSpeed={50} />
+      </div>
       <Tabs variant="enclosed" mt={4}>
         <TabList>
           <Tab _selected={{ color: "#fff", bg: "black" }}>Estructuras</Tab>
