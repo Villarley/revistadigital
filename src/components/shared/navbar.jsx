@@ -13,11 +13,11 @@ export default function Navbar() {
         setSelectedTopic(selected)
     }
     const topics = [
-        { name: "Tecnologías de la Información", subTopics: [{name:"/", Dir:""}], dir:"/tics" },
+        { name: "Tecnologías de la Información", subTopics: [{}], dir:"/tics" },
         { name: "Emprendimiento e innovación", subTopics: [{}], dir:"/emp" },
         { name: "Programación para web", subTopics: prwebArticles, dir:"/prweb" },
-        { name: "Diseño de software", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/disoft" },
-        { name: "Soporte TI", subTopics: [{name:"/EstructurasDeControl", Dir:"EstControl"}], dir:"/soporte" },
+        { name: "Diseño de software", subTopics: [{}], dir:"/disoft" },
+        { name: "Soporte TI", subTopics: [{}], dir:"/soporte" },
     ]
     // const string = pathname.split("/")
     // const firstPath = "/"+string[ pathname.startsWith("/") ? 1 : 0]
