@@ -1,14 +1,18 @@
 import React from "react"
 import Image from "next/image"
 import { Flex } from "@chakra-ui/react"
-import { Typewriter } from "@/components/shared"
+import { Typewriter, BackIcon } from "@/components/shared"
 import { NormalText, BoldText } from "@/components/shared/Text"
 import { FlowDiagram } from "@/assets/images"
+
 
 export default function FlowDiagrams() {
   return (
     <div className="w-full">
-      <Typewriter text="Diagramas de flujo" type="heading" typingSpeed={50} />
+      <div className="flex">
+        <BackIcon/>
+        <Typewriter text="Diagramas de flujo" type="heading" typingSpeed={50} />
+      </div>
       <Flex mt={4} flexDirection="column" gap={5}>
         <NormalText>
           Los diagramas de flujo son una herramienta gráfica utilizada para

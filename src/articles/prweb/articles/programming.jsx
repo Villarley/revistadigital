@@ -10,7 +10,7 @@ import {
   TabPanels,
   TabPanel,
 } from "@chakra-ui/react"
-import { Typewriter, ArticleCard } from "@/components/shared/"
+import { Typewriter, ArticleCard, BackIcon } from "@/components/shared/"
 import { H1, H2, NormalText, BoldText, Code } from "@/components/shared/Text"
 import { ConditionalConsole, ReferenceParameter } from "@/assets/images"
 
@@ -21,11 +21,14 @@ export default function Programming() {
 const MainTab = () => {
   return (
     <>
+    <div className="flex gap-10">
+      <BackIcon />
       <Typewriter
-        text="Programación conceptos básicos"
-        type="heading"
-        typingSpeed={50}
-      />
+          text="Programación conceptos básicos"
+          type="heading"
+          typingSpeed={50}
+        />
+    </div>
       <Tabs variant="enclosed" mt={4}>
         <TabList>
           <Tab _selected={{ color: "#fff", bg: "black" }}>Expresiones</Tab>

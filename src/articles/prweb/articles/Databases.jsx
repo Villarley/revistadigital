@@ -19,7 +19,7 @@ import {
   TabPanel,
   TabPanels,
 } from "@chakra-ui/react"
-import { Typewriter } from "@/components/shared/"
+import { Typewriter, BackIcon } from "@/components/shared/"
 import { H1, H2, NormalText, BoldText, Code } from "@/components/shared/Text"
 import { Pyramid, EntityRelationshipModel } from "@/assets/images/"
 
@@ -27,7 +27,10 @@ export default function Databases() {
   return (
     <>
       <Flex flexDirection="column" gap={3}>
-        <Typewriter text="Bases de datos" type="heading" typingSpeed={50} />
+        <div className="flex">
+          <BackIcon/>
+          <Typewriter text="Bases de datos" type="heading" typingSpeed={50} />
+        </div>
         <Tabs variant="enclosed" mt={4}>
           <TabList>
             <Tab _selected={{ color: "#fff", bg: "black" }}>

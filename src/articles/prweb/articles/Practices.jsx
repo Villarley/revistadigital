@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typewriter, Card } from "@/components/shared"
+import { Typewriter, Card, BackIcon } from "@/components/shared"
 import { Grid } from "@chakra-ui/react"
 
 export default function Practices() {
@@ -11,7 +11,10 @@ export default function Practices() {
     ]
   return (
     <>
-    <Typewriter text="Prácticas Peritazgo" type="heading" typingSpeed={50}/>
+    <div className="flex">
+        <BackIcon/>
+        <Typewriter text="Prácticas Peritazgo" type="heading" typingSpeed={50}/>
+    </div>
     <Grid mt={5} gap={4} templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)","repeat(3, 1fr)"]}>
         {
             practices?.map((practices) =>(

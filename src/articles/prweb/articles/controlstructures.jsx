@@ -13,18 +13,22 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
-import { Typewriter } from "@/components/shared";
+import { Typewriter, BackIcon } from "@/components/shared";
 import { NormalText, H1, Code, BoldText, H2 } from "@/components/shared/Text";
 import { Paradigm } from "@/assets/images";
 
 export default function ControlStructures() {
   return (
     <div className="w-full">
-      <Typewriter
-        text="Estructuras de control"
-        type="heading"
-        typingSpeed={50}
-      />
+      <div className="flex">
+        <BackIcon/>
+        <Typewriter
+          text="Estructuras de control"
+          type="heading"
+          typingSpeed={50}
+        />
+      </div>
+
       <NormalText>Hay varios tipos de estructuras de control</NormalText>
       <Tabs variant="enclosed" mt={4}>
         <TabList>
