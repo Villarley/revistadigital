@@ -1,10 +1,11 @@
 "use client"
 import "animate.css"
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import Entry from './Entries'
-import { prwebArticles } from "@/articles/prweb";
+import React, { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import Entry from "./Entries"
+import { prwebArticles } from "@/articles/prweb"
+import { TicsArticles } from "@/articles/tics"
 
 export default function Navbar() {
     const [selectedTopic, setSelectedTopic] = useState()
@@ -13,7 +14,7 @@ export default function Navbar() {
         setSelectedTopic(selected)
     }
     const topics = [
-        { name: "Tecnologías de la Información", subTopics: [{}], dir:"/tics" },
+        { name: "Tecnologías de la Información", subTopics: TicsArticles, dir:"/tics" },
         { name: "Emprendimiento e innovación", subTopics: [{}], dir:"/emp" },
         { name: "Programación para web", subTopics: prwebArticles, dir:"/prweb" },
         { name: "Diseño de software", subTopics: [{}], dir:"/disoft" },

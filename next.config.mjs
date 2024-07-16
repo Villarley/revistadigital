@@ -54,6 +54,10 @@ const nextConfig = {
       {
         protocol:"https",
         hostname:"www.nextu.com"
+      },
+      {
+        protocol: "https",
+        hostname: "https://arayara.org",
       }
     ],
   },
