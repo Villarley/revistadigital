@@ -11,7 +11,7 @@ export default function Practices() {
     ]
   return (
     <>
-    <div className="flex">
+    <div className="flex items-center">
         <BackIcon/>
         <Typewriter text="Prácticas Peritazgo" type="heading" typingSpeed={50}/>
     </div>

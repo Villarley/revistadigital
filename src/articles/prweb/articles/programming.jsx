@@ -21,7 +21,7 @@ export default function Programming() {
 const MainTab = () => {
   return (
     <>
-    <div className="flex gap-10">
+    <div className="flex items-center gap-10">
       <BackIcon />
       <Typewriter
           text="Programación conceptos básicos"

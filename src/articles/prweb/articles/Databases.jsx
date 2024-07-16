@@ -27,7 +27,7 @@ export default function Databases() {
   return (
     <>
       <Flex flexDirection="column" gap={3}>
-        <div className="flex">
+        <div className="flex items-center">
           <BackIcon/>
           <Typewriter text="Bases de datos" type="heading" typingSpeed={50} />
         </div>

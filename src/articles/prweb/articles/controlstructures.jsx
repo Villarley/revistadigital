@@ -20,7 +20,7 @@ import { Paradigm } from "@/assets/images";
 export default function ControlStructures() {
   return (
     <div className="w-full">
-      <div className="flex">
+      <div className="flex items-center">
         <BackIcon/>
         <Typewriter
           text="Estructuras de control"

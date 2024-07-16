@@ -45,7 +45,7 @@ import {
 export default function DataStructures() {
   return (
     <div className="w-full">
-      <div className="flex">
+      <div className="flex items-center">
         <BackIcon/>
         <Typewriter text="Estructuras de datos" type="heading" typingSpeed={50} />
       </div>
