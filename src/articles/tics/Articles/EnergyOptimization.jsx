@@ -1,16 +1,6 @@
-import React from "react"
-
+import { Canva } from "@/components/shared"
 export default function EnergyOptimization() {
   return (
-    <div className="h-screen">
-      <iframe
-
-        loading="lazy"
-        className="w-full h-full"
-        src="https://www.canva.com/design/DAGLJiTmeV8/XTdHTUXTWFmaBXyHxFlufw/view?embed"
-        allowFullScreen
-        title="Canva Presentation"
-      />
-    </div>
+    <Canva link="https://www.canva.com/design/DAGM8y5Gxv4/tkTtqNc5tlNppbonVtADwA/view?embed"/>
   )
 }

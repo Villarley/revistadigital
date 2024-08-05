@@ -57,10 +57,22 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "https://arayara.org",
+        hostname: "arayara.org",
+      },
+      {
+        protocol:"https",
+        hostname: "www.lyceumformacion.com"
+      },
+      {
+        protocol: "https",
+        hostname: "folkraps.wordpress.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com"
       }
     ],
   },
-};
+}
 
 export default nextConfig;
