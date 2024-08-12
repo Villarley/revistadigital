@@ -9,7 +9,7 @@ import { FlowDiagram } from "@/assets/images"
 export default function FlowDiagrams() {
   return (
     <div className="w-full">
-      <div className="flex">
+      <div className="flex items-center">
         <BackIcon/>
         <Typewriter text="Diagramas de flujo" type="heading" typingSpeed={50} />
       </div>

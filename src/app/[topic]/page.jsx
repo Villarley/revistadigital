@@ -1,6 +1,6 @@
 "use client"
-import React from 'react'
-import { Error } from "@/components/shared/";
+import React from "react"
+import { Error } from "@/components/shared/"
 import { articles } from "@/articles/"
 
 export default function MainTopic({ params }) {

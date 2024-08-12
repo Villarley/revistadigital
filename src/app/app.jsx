@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+"use client"
+import React from "react"
 import {
   useDisclosure,
   Button,
@@ -8,13 +8,13 @@ import {
   DrawerContent,
   DrawerCloseButton,
   IconButton,
-} from "@chakra-ui/react";
-import { Menu } from "lucide-react";
-import { Navbar } from "@/components/shared/";
+} from "@chakra-ui/react"
+import { Menu } from "lucide-react"
+import { Navbar } from "@/components/shared/"
 
 export default function App({ children }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
 
   return (
     <div className="h-screen w-full flex flex-col md:flex-row">
@@ -43,5 +43,5 @@ export default function App({ children }) {
       </div>
       <div className="w-full md:w-[77%] bg-Bg p-8 overflow-auto">{children}</div>
     </div>
-  );
+  )
 }

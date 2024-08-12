@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import { CircleChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import React from "react"
+import Image from "next/image"
+import { CircleChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Card({ title, img, root, dir, linkInsideMagazine }) {
   return (
@@ -13,11 +13,14 @@ export default function Card({ title, img, root, dir, linkInsideMagazine }) {
       width={100}
       src={img}
       alt=""
+      draggable={false}
       className=" rounded-t-md w-full h-1/2"
+      quality={100}
+      priority={true}
     />
     <h3 className="mt-2 text-lg font-semibold">{title}</h3>
     <Link className="" href={linkInsideMagazine ? root+"/"+dir : dir}>
-    <CircleChevronRight className="hover:scale-125" color='#ff8000'/>
+    <CircleChevronRight className="hover:scale-125" color="#ff8000"/>
     </Link>
   </div>
   )

@@ -54,9 +54,25 @@ const nextConfig = {
       {
         protocol:"https",
         hostname:"www.nextu.com"
+      },
+      {
+        protocol: "https",
+        hostname: "arayara.org",
+      },
+      {
+        protocol:"https",
+        hostname: "www.lyceumformacion.com"
+      },
+      {
+        protocol: "https",
+        hostname: "folkraps.wordpress.com",
+      },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com"
       }
     ],
   },
-};
+}
 
 export default nextConfig;
